@@ -12,6 +12,9 @@ import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
 
 public class wewlad extends JFrame {
 
@@ -19,7 +22,6 @@ public class wewlad extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	private JTextField textField_Cel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
 	
@@ -141,17 +143,29 @@ public class wewlad extends JFrame {
 		gbc_button_bufe.gridy = 5;
 		contentPane.add(button_bufe, gbc_button_bufe);
 		
-		textField_Cel = new JTextField();
-		GridBagConstraints gbc_textField_Cel = new GridBagConstraints();
-		gbc_textField_Cel.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_Cel.gridwidth = 2;
-		gbc_textField_Cel.fill = GridBagConstraints.BOTH;
-		gbc_textField_Cel.gridx = 0;
-		gbc_textField_Cel.gridy = 6;
-		contentPane.add(textField_Cel, gbc_textField_Cel);
-		textField_Cel.setColumns(10);
-		
 		JButton btnNewButton_Ok = new JButton("Ok");
+		btnNewButton_Ok.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			
+				
+			}
+		});
+		
+		
+		
+		
+		
+		JTextArea textArea = new JTextArea();
+		GridBagConstraints gbc_textArea = new GridBagConstraints();
+		gbc_textArea.gridwidth = 2;
+		gbc_textArea.insets = new Insets(0, 0, 5, 5);
+		gbc_textArea.fill = GridBagConstraints.BOTH;
+		gbc_textArea.gridx = 0;
+		gbc_textArea.gridy = 6;
+		contentPane.add(textArea, gbc_textArea);
+		
+		
 		GridBagConstraints gbc_btnNewButton_Ok = new GridBagConstraints();
 		gbc_btnNewButton_Ok.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_Ok.insets = new Insets(0, 0, 0, 5);
